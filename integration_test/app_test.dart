@@ -14,6 +14,13 @@ void main() {
       await Future.delayed(Duration(seconds: 5));
       await tester.pumpAndSettle();
       // expect(t, matcher)
+
+      // tester/WidgetTester ---> the  widgetTester is used build and interact with widget in the test environment  
+
+      // pump --> it is used to rebuild the provided widget.
+      // pumpAndSettle --> it is used to async/await and nagigation to another page
+      // operation that require some time on in the future in that case use pumpAndSettle()
+
       await Future.delayed(Duration(seconds: 5));
       await tester.enterText(find.byType(TextField).at(0), 'username');
       await Future.delayed(Duration(seconds: 5));
